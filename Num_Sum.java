@@ -8,6 +8,7 @@ public class Num_Sum
 		System.out.println("Enter the String : ");
 		String s=sc.next();
 		int sum=0;
+		int count=0;
 		for (int i=0;i<s.length();i++) 
 		{
 			String temp="";
@@ -17,6 +18,7 @@ public class Num_Sum
 				if (ch>='0'&&ch<='9') 
 				{
 					temp=temp+ch;
+					count++;
 				} 
 				else 
 				{
@@ -27,8 +29,13 @@ public class Num_Sum
 			{
 				int n=Integer.parseInt(temp);
 				sum=sum+n;
+				if(count>=2) {
+					i++;
+				}
 			}
 		}
 		System.out.println("The Sum of Numbers inside the String " +s+" is "+sum);
 	}
 }
+
+
